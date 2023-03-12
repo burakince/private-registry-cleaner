@@ -49,13 +49,15 @@ kind: pipeline
 name: default
 
 steps:
-- name: registry-clean
-  image: burakince/private-registry-cleaner
-  pull: if-not-exists
-  settings:
-    username: myusername
-    password: mypassword
-    host: myregistryhost
-    repo: myorg/myimage
-    ignore_ssl_verification: true
+  - name: registry-clean
+    image: burakince/private-registry-cleaner
+    pull: if-not-exists
+    settings:
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+      host: myregistryhost
+      repo: myorg/myimage
+      ignore_ssl_verification: true
 ```
