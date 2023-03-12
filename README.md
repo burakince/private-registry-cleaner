@@ -51,6 +51,7 @@ name: default
 steps:
 - name: registry-clean
   image: burakince/private-registry-cleaner
+  pull: if-not-exists
   settings:
     username: myusername
     password: mypassword
