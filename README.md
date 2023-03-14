@@ -4,16 +4,16 @@
 
 | Env Variable                   | Description                           | Required | Default |
 | ------------------------------ | ------------------------------------- | -------- | ------- |
-| PLUGIN_USERNAME                | Docker username                       | Required |         |
-| PLUGIN_PASSWORD                | Docker password                       | Required |         |
-| PLUGIN_HOST                    | Registry to target                    | Required |         |
-| PLUGIN_SCHEMA                  | Registry address schema               | Optional | https   |
-| PLUGIN_PORT                    | Registry port                         | Optional | 443     |
-| PLUGIN_REPO                    | Repository to target                  | Required |         |
-| PLUGIN_MIN                     | Minimum number of tags/images to keep | Optional | 3       |
-| PLUGIN_MAX                     | Maximum age of tags/images in days    | Optional | 15      |
-| PLUGIN_DEBUG                   | Show verbose information              | Optional | false   |
-| PLUGIN_IGNORE_SSL_VERIFICATION | Skip TLS verification                 | Optional | false   |
+| PLUGIN_USERNAME                | Docker username                       | Yes      |         |
+| PLUGIN_PASSWORD                | Docker password                       | Yes      |         |
+| PLUGIN_HOST                    | Registry to target                    | Yes      |         |
+| PLUGIN_SCHEMA                  | Registry address schema               | Not      | https   |
+| PLUGIN_PORT                    | Registry port                         | Not      | 443     |
+| PLUGIN_REPO                    | Repository to target                  | Yes      |         |
+| PLUGIN_MIN                     | Minimum number of tags/images to keep | Not      | 3       |
+| PLUGIN_MAX                     | Maximum age of tags/images in days    | Not      | 15      |
+| PLUGIN_DEBUG                   | Show verbose information              | Not      | false   |
+| PLUGIN_IGNORE_SSL_VERIFICATION | Skip TLS verification                 | Not      | false   |
 
 ## CLI Usage
 
@@ -50,7 +50,7 @@ name: default
 
 steps:
   - name: registry-clean
-    image: burakince/private-registry-cleaner
+    image: burakince/private-registry-cleaner:1.0.0
     pull: if-not-exists
     settings:
       username:
