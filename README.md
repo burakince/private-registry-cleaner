@@ -7,13 +7,13 @@
 | PLUGIN_USERNAME                | Docker username                       | Yes      |         |
 | PLUGIN_PASSWORD                | Docker password                       | Yes      |         |
 | PLUGIN_HOST                    | Registry to target                    | Yes      |         |
-| PLUGIN_SCHEMA                  | Registry address schema               | Not      | https   |
-| PLUGIN_PORT                    | Registry port                         | Not      | 443     |
+| PLUGIN_SCHEMA                  | Registry address schema               | No       | https   |
+| PLUGIN_PORT                    | Registry port                         | No       | 443     |
 | PLUGIN_REPO                    | Repository to target                  | Yes      |         |
-| PLUGIN_MIN                     | Minimum number of tags/images to keep | Not      | 3       |
-| PLUGIN_MAX                     | Maximum age of tags/images in days    | Not      | 15      |
-| PLUGIN_DEBUG                   | Show verbose information              | Not      | false   |
-| PLUGIN_IGNORE_SSL_VERIFICATION | Skip TLS verification                 | Not      | false   |
+| PLUGIN_MIN                     | Minimum number of tags/images to keep | No       | 3       |
+| PLUGIN_MAX                     | Maximum age of tags/images in days    | No       | 15      |
+| PLUGIN_DEBUG                   | Show verbose information              | No       | false   |
+| PLUGIN_IGNORE_SSL_VERIFICATION | Skip TLS verification                 | No       | false   |
 
 ## CLI Usage
 
