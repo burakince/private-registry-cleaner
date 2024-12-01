@@ -17,7 +17,7 @@
 
 ## CLI Usage
 
-```
+```bash
 PLUGIN_IGNORE_SSL_VERIFICATION=true \
   PLUGIN_USERNAME=myusername \
   PLUGIN_PASSWORD=mypassword \
@@ -30,7 +30,7 @@ PLUGIN_IGNORE_SSL_VERIFICATION=true \
 
 ## Image Usage
 
-```
+```bash
 docker run \
   -e PLUGIN_IGNORE_SSL_VERIFICATION=true \
   -e PLUGIN_USERNAME=myusername \
@@ -42,15 +42,15 @@ docker run \
   --rm -it burakince/private-registry-cleaner
 ```
 
-## Drone CI Plugin Usage
+## [Drone CI](https://www.drone.io/) or [Woodpecker CI](https://woodpecker-ci.org/) Plugin Usage
 
-```
+```yaml
 kind: pipeline
 name: default
 
 steps:
   - name: registry-clean
-    image: burakince/private-registry-cleaner:1.0.0
+    image: burakince/private-registry-cleaner:1.0.1
     pull: if-not-exists
     settings:
       username:
