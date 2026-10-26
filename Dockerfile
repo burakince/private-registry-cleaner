@@ -1,4 +1,4 @@
-FROM alpine:3.24.1
+FROM alpine:3.24.3
 
 RUN apk -Uuv add curl ca-certificates coreutils jq bash
 
